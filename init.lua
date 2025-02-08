@@ -7,10 +7,10 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local lspconfig = require("lspconfig")
-
       -- Configure TypeScript server (tsserver)
       lspconfig.tsserver.setup({
         on_attach = function(client, bufnr)
+          client.server_capabilities.documentFormattingProvider = false
           -- Enable completion
           require("cmp").setup.buffer({ completion = { autocomplete = false } })
           -- Set up some keymaps if desired (for LSP functions)
