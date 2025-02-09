@@ -7,3 +7,8 @@ vim.api.nvim_set_keymap("v", "<C-c>", '"+y', { noremap = true, silent = true }) 
 vim.api.nvim_set_keymap("v", "<C-v>", '"+p', { noremap = true, silent = true }) -- Paste from clipboard in visual mode
 -- Remap Ctrl+Z to undo
 vim.api.nvim_set_keymap("n", "<C-z>", "u", { noremap = true, silent = true })
+
+
+-- Override the default keymap for cwd wide grep
+vim.api.nvim_set_keymap('n', '<leader>/', '<cmd>Telescope live_grep<cr>', { noremap = true, silent = true })
+
