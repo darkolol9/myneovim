@@ -36,10 +36,10 @@ return {
         },
         mapping = cmp.mapping.preset.insert({
           ["<C-Space>"] = cmp.mapping.complete(), -- Trigger autocomplete manually
-          ["<CR>"] = cmp.mapping.confirm({ select = true }),
+          ["<Tab>"] = cmp.mapping.confirm({ select = true }),
         }),
         sources = {
-          { name = "nvim_lsp" },
+          -- { name = "nvim_lsp" },
           { name = "vsnip" },
         },
       })
