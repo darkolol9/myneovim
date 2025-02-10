@@ -12,8 +12,20 @@ return {
       vim.api.nvim_set_keymap('n', '<Leader>fF', '<Cmd>Telescope find_files cwd=~<CR>', { noremap = true, silent = true })  -- search everywhere
 
       -- You can also call telescope.setup() here to ensure it's configured
-      telescope.setup({})
-    end
+      -- -- Add to your telescope config
+      telescope.setup({
+        defaults = {
+          -- Enable fuzzy matching
+          file_sorter = require('telescope.sorters').get_fuzzy_file,
+          generic_sorter = require('telescope.sorters').get_generic_fuzzy_sorter,
+
+          -- Configure fuzzy matching settings
+          fuzzy_search = true,
+          case_mode = "smart_case",  -- Case sensitivity behavior ("ignore_case", "smart_case", "respect_case")
+        },
+      })
+
+   end
   }
 }
 
