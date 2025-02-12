@@ -1,5 +1,6 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
+require("flash").toggle()
 
 return {
   -- nvim-lspconfig for Language Server Protocol
