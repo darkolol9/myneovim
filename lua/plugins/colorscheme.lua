@@ -4,11 +4,12 @@ return {
   { "sainnhe/everforest" },
   { "navarasu/onedark.nvim" },
   { "scottmckendry/cyberdream.nvim" },
+  { "folke/tokyonight.nvim" },
   -- Configure LazyVim to load gruvbox-material with light background
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "cyberdream",
+      colorscheme = "tokyonight",
     },
   },
 }

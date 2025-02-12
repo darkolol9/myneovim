@@ -16,8 +16,8 @@ return {
       telescope.setup({
         defaults = {
           -- Enable fuzzy matching
-          file_sorter = require('telescope.sorters').get_fuzzy_file,
-          generic_sorter = require('telescope.sorters').get_generic_fuzzy_sorter,
+          -- file_sorter = require('telescope.sorters').get_fuzzy_file,
+          -- generic_sorter = require('telescope.sorters').get_generic_fuzzy_sorter,
 
           -- Configure fuzzy matching settings
           fuzzy_search = true,
