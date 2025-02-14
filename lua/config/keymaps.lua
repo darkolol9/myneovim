@@ -1,6 +1,7 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 --
+
 vim.api.nvim_set_keymap("n", "<C-c>", '"+y', { noremap = true, silent = true }) -- Copy to clipboard
 vim.api.nvim_set_keymap("n", "<C-v>", '"+p', { noremap = true, silent = true }) -- Paste from clipboard
 vim.api.nvim_set_keymap("v", "<C-c>", '"+y', { noremap = true, silent = true }) -- Copy to clipboard in visual mode
@@ -28,3 +29,7 @@ vim.api.nvim_set_keymap('n', '<leader>/', '<cmd>Telescope live_grep<cr>', { nore
 vim.api.nvim_set_keymap('n', '<leader>e', ':Neotree toggle<cr>', { noremap = true, silent = true })
 
 
+-- custom
+-- vim.api.nvim_set_keymap("n", "<leader>hh", "<cmd>lua Prnt()<cr>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "kk", "<cmd>cnext<cr>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "jj", "<cmd>cprev<cr>", { noremap = true, silent = true })
