@@ -26,7 +26,7 @@ vim.api.nvim_set_keymap('v', '<A-Down>', ":m '>+1<CR>gv=gv", { noremap = true, s
 
 -- Override the default keymap for cwd wide grep
 vim.api.nvim_set_keymap('n', '<leader>/', '<cmd>Telescope live_grep<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>e', ':Neotree toggle<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>e', ':Neotree toggle<cr>', { noremap = true, silent = true })
 
 
 -- custom
