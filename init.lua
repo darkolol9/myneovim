@@ -16,6 +16,7 @@ return {
           require("cmp").setup.buffer({ completion = { autocomplete = false } })
           -- Set up some keymaps if desired (for LSP functions)
           vim.api.nvim_buf_set_keymap(bufnr, "n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true })
+          vim.api.nvim_set_keymap("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true })
         end,
       })
     end,
