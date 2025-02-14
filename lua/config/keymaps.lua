@@ -33,3 +33,8 @@ vim.api.nvim_set_keymap('n', '<leader>e', ':Neotree toggle<cr>', { noremap = tru
 -- vim.api.nvim_set_keymap("n", "<leader>hh", "<cmd>lua Prnt()<cr>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "kk", "<cmd>cnext<cr>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "jj", "<cmd>cprev<cr>", { noremap = true, silent = true })
+
+
+-- tab to switch between tabs! and shift tab to cycle backwards
+vim.api.nvim_set_keymap("n", "<tab>", "<cmd>bn<cr>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<S-tab>", "<cmd>bp<cr>", { noremap = true, silent = true })
