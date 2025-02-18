@@ -2,6 +2,11 @@
 require("config.lazy")
 require("flash").toggle()
 
+
+-- //set theme
+vim.cmd "colorscheme duskfox"
+print("setting theme")
+
 return {
   -- nvim-lspconfig for Language Server Protocol
   {

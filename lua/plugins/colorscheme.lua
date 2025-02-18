@@ -6,11 +6,13 @@ return {
   { "scottmckendry/cyberdream.nvim" },
   { "folke/tokyonight.nvim" },
   { "cpea2506/one_monokai.nvim" },
+  { "nyoom-engineering/oxocarbon.nvim" },
+  { "EdenEast/nightfox.nvim" }, -- lazy
   -- Configure LazyVim to load gruvbox-material with light background
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "one_monokai",
+      colorscheme = "nightfox",
     },
   },
 }
