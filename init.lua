@@ -1,10 +1,10 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
-require("flash").toggle()
+-- require("flash").toggle()
 
 
 -- //set theme
-vim.cmd "colorscheme duskfox"
+vim.cmd "colorscheme nightfox"
 print("setting theme")
 
 return {
