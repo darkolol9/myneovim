@@ -2,9 +2,9 @@
 require("config.lazy")
 -- require("flash").toggle()
 
-
 -- //set theme
-vim.cmd "colorscheme nightfox"
+-- vim.cmd "colorscheme nightfox"
+require("tokyonight").load({ style = "night" })
 print("setting theme")
 
 return {
