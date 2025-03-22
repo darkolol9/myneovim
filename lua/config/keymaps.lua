@@ -34,6 +34,7 @@ vim.api.nvim_set_keymap('n', '<leader>/', '<cmd>Telescope live_grep<cr>', { nore
 vim.api.nvim_set_keymap("n", "kk", "<cmd>cnext<cr>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "jj", "<cmd>cprev<cr>", { noremap = true, silent = true })
 
+-- ctrl A select all baby!
 vim.api.nvim_set_keymap("n", "<C-a>", "ggVG", { noremap = true, silent = true })
 
 -- tab to switch between tabs! and shift tab to cycle backwards
