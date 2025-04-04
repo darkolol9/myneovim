@@ -1,11 +1,12 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 -- require("flash").toggle()
+-- console.log(:m '>+1<CR>gv=gv
 
 -- //set theme
 -- vim.cmd "colorscheme nightfox"
-require("tokyonight").load({ style = "night" })
-print("setting theme")
+-- require("tokyonight").load({ style = "night" })
+-- print("setting theme")
 
 return {
   -- nvim-lspconfig for Language Server Protocol
