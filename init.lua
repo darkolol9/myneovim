@@ -1,4 +1,5 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
+vim.opt.clipboard = "unnamedplus"
 require("config.lazy")
 -- require("flash").toggle()
 -- console.log(:m '>+1<CR>gv=gv
