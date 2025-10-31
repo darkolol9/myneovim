@@ -5,7 +5,7 @@ require("config.lazy")
 -- console.log(:m '>+1<CR>gv=gv
 
 -- //set theme
--- vim.cmd "colorscheme nightfox"
+vim.cmd "colorscheme tokyonight"
 -- require("tokyonight").load({ style = "night" })
 -- print("setting theme")
 
