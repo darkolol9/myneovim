@@ -1,1 +1,2 @@
-return { "Bekaboo/dropbar.nvim" }
+return {}
+-- return { "Bekaboo/dropbar.nvim" }

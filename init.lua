@@ -5,9 +5,9 @@ require("config.lazy")
 -- console.log(:m '>+1<CR>gv=gv
 
 -- //set theme
-vim.cmd "colorscheme tokyonight"
--- require("tokyonight").load({ style = "night" })
--- print("setting theme")
+-- vim.cmd "colorscheme tokyonight"
+require("tokyonight").load({ style = "night" })
+print("setting theme")
 
 return {
   -- nvim-lspconfig for Language Server Protocol
