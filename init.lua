@@ -48,7 +48,7 @@ return {
           ["<Tab>"] = cmp.mapping.confirm({ select = true }),
         }),
         sources = {
-          -- { name = "nvim_lsp" },
+          { name = "lunasnip" },
           { name = "vsnip" },
         },
       })
