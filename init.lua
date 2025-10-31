@@ -48,8 +48,9 @@ return {
           ["<Tab>"] = cmp.mapping.confirm({ select = true }),
         }),
         sources = {
-          { name = "lunasnip" },
-          { name = "vsnip" },
+          { name = "lunasnip", priority = 10000 },
+          { name = "vsnip", priority = 900},
+          { name = "codeium", priority = 800 },
         },
       })
     end,
