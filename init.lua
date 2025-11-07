@@ -5,9 +5,35 @@ require("config.lazy")
 -- console.log(:m '>+1<CR>gv=gv
 
 -- //set theme
--- vim.cmd "colorscheme tokyonight"
+-- vim.cmd "colorscheme darkblue"
 require("tokyonight").load({ style = "night" })
 print("setting theme")
+
+
+local groups = {
+  "Normal",
+  "NormalNC",
+  "NormalFloat",
+  "NormalSB",
+  "FloatBorder",
+  "SignColumn",
+  "EndOfBuffer",
+  "CursorLine",
+  "CursorLineNr",
+  "LineNr",
+  "Folded",
+  "NvimTreeNormal",        -- for nvim-tree
+  "NvimTreeNormalNC",      -- for nvim-tree split case
+  "NeoTreeNormal",         -- for neo-tree
+  "NeoTreeNormalNC",       -- for neo-tree split case
+  "TelescopeNormal",
+  "TelescopeBorder",
+}
+
+for _, group in ipairs(groups) do
+  vim.api.nvim_set_hl(0, group, { bg = "none" })
+end
+
 
 return {
   -- nvim-lspconfig for Language Server Protocol
