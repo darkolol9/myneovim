@@ -1,14 +1,16 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
-vim.opt.clipboard = "unnamedplus"
 require("config.lazy")
+local hl_utils = require("utils.bg")
+
+-- //to enable proper copy paste to clipboard
+vim.opt.clipboard = "unnamedplus"
 
 -- //set theme
 vim.cmd "colorscheme citruszest"
 -- require("tokyonight").load({ style = "night" })
 
-local hl_utils = require("utils.bg")
+-- //helper tool to make transparent background
 hl_utils.clear_bg()
-
 
 return {
   -- nvim-lspconfig for Language Server Protocol
