@@ -1,13 +1,10 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 vim.opt.clipboard = "unnamedplus"
 require("config.lazy")
--- require("flash").toggle()
--- console.log(:m '>+1<CR>gv=gv
 
 -- //set theme
 vim.cmd "colorscheme citruszest"
 -- require("tokyonight").load({ style = "night" })
-print("setting theme")
 
 
 local groups = {
