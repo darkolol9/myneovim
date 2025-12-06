@@ -6,11 +6,12 @@ local hl_utils = require("utils.bg")
 vim.opt.clipboard = "unnamedplus"
 
 -- //set theme
-vim.cmd "colorscheme citruszest"
+-- vim.cmd "colorscheme citruszest"
+ require('nightingale').load()
 -- require("tokyonight").load({ style = "night" })
 
 -- //helper tool to make transparent background
-hl_utils.clear_bg()
+-- hl_utils.clear_bg()
 
 return {
   -- nvim-lspconfig for Language Server Protocol

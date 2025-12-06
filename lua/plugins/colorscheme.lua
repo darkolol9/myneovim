@@ -7,6 +7,8 @@ return {
   { "folke/tokyonight.nvim" },
   { "cpea2506/one_monokai.nvim" },
   { "nyoom-engineering/oxocarbon.nvim" },
+  { "Mofiqul/vscode.nvim" },
+  { "xeind/nightingale.nvim" },
   {
     "EdenEast/nightfox.nvim",
     lazy = false,
