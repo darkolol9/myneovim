@@ -7,8 +7,7 @@ vim.opt.clipboard = "unnamedplus"
 
 -- //set theme
 -- vim.cmd "colorscheme citruszest"
--- require('nightingale').load()
-require('vscode').load()
+require("utils.persist").load_colorscheme()
 -- require("tokyonight").load({ style = "night" })
 
 -- //helper tool to make transparent background

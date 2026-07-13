@@ -3,7 +3,7 @@ return {
   "folke/snacks.nvim",
   opts = {
     picker = {},
-    explorer = {},
+    explorer = { replace_netrw = false },
     lsp = {
       inline_hints = { enabled = false },
     },
@@ -340,7 +340,18 @@ return {
     {
       "<leader>uC",
       function()
-        Snacks.picker.colorschemes()
+        Snacks.picker.colorschemes({
+          confirm = function(picker, item)
+            picker:close()
+            if item then
+              picker.preview.state.colorscheme = nil
+              vim.schedule(function()
+                vim.cmd("colorscheme " .. item.text)
+                require("utils.persist").save_colorscheme(item.text)
+              end)
+            end
+          end,
+        })
       end,
       desc = "Colorschemes",
     },
