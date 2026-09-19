@@ -21,7 +21,7 @@ function M.load_colorscheme()
       return
     end
   end
-  require("nightingale").load()
+  pcall(vim.cmd.colorscheme, "nightingale")
 end
 
 return M

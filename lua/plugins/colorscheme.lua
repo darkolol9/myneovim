@@ -1,82 +1,47 @@
+-- Theme plugins.
+--
+-- Every theme is lazy-loaded: lazy.nvim loads a plugin automatically the
+-- first time `:colorscheme <name>` asks for a scheme from its colors/ dir.
+-- Previously five of these had `lazy = false, priority = 1000` and each
+-- called `vim.cmd("colorscheme ...")` in config, so startup applied six
+-- different colorschemes back to back before the persisted one won.
 return {
-  -- Theme plugins
-  { "sainnhe/gruvbox-material" },
-  { "sainnhe/everforest" },
-  { "navarasu/onedark.nvim" },
-  { "scottmckendry/cyberdream.nvim" },
-  { "folke/tokyonight.nvim" },
-  { "cpea2506/one_monokai.nvim" },
-  { "nyoom-engineering/oxocarbon.nvim" },
-  { "Mofiqul/vscode.nvim" },
-  { "xeind/nightingale.nvim" },
+  { "sainnhe/gruvbox-material", lazy = true },
+  { "sainnhe/everforest", lazy = true },
+  { "navarasu/onedark.nvim", lazy = true },
+  { "scottmckendry/cyberdream.nvim", lazy = true },
+  { "folke/tokyonight.nvim", lazy = true },
+  { "cpea2506/one_monokai.nvim", lazy = true },
+  { "nyoom-engineering/oxocarbon.nvim", lazy = true },
+  { "Mofiqul/vscode.nvim", lazy = true },
+  { "xeind/nightingale.nvim", lazy = true },
   {
     "EdenEast/nightfox.nvim",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      require("nightfox").setup({
-        options = {
-          transparent = false, -- set true if you want transparent background
-          terminal_colors = true,
-          styles = {
-            comments = "italic",
-            keywords = "bold",
-            types = "italic,bold",
-          },
+    lazy = true,
+    opts = {
+      options = {
+        transparent = false,
+        terminal_colors = true,
+        styles = {
+          comments = "italic",
+          keywords = "bold",
+          types = "italic,bold",
         },
-      })
-      vim.cmd("colorscheme terafox")
-    end,
+      },
+    },
   },
-  -- Lua
-  {
-    "olivercederborg/poimandres.nvim",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      require("poimandres").setup({
-        -- leave this setup function empty for default config
-        -- or refer to the configuration section
-        -- for configuration options
-      })
-    end,
+  { "olivercederborg/poimandres.nvim", lazy = true, opts = {} },
+  { "uloco/bluloco.nvim", lazy = true, dependencies = { "rktjmp/lush.nvim" } },
+  { "vague-theme/vague.nvim", lazy = true, opts = {} },
+  { "zootedb0t/citruszest.nvim", lazy = true },
 
-    -- optionally set the colorscheme within lazy config
-    init = function()
-      vim.cmd("colorscheme poimandres")
-    end,
-  },
-  {
-    "uloco/bluloco.nvim",
-    lazy = false,
-    priority = 1000,
-    dependencies = { "rktjmp/lush.nvim" },
-    config = function()
-      -- your optional config goes here, see below.
-    end,
-  },
-  {
-    "vague-theme/vague.nvim",
-    lazy = false, -- make sure we load this during startup if it is your main colorscheme
-    priority = 1000, -- make sure to load this before all the other plugins
-    config = function()
-      -- NOTE: you do not need to call setup if you don't want to.
-      require("vague").setup({
-        -- optional configuration here
-      })
-      vim.cmd("colorscheme vague")
-    end,
-  },
-  {
-    "zootedb0t/citruszest.nvim",
-    lazy = false,
-    priority = 1000,
-  },
-  -- Tell LazyVim which colorscheme to use by default
+  -- Let LazyVim apply the persisted colorscheme exactly once at startup.
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox-material",
+      colorscheme = function()
+        require("utils.persist").load_colorscheme()
+      end,
     },
   },
 }
